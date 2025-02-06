@@ -6,7 +6,7 @@ const SyncUser = () => {
   const { user } = useUser();
 
   useEffect(() => {
-    console.log("👤 SyncUser montato, user:", user);
+    console.log("Componente caricato, user:", user);
     if (user) {
       axios.post("http://localhost:5000/api/auth/sync-user", {
         clerkId: user.id,
@@ -15,10 +15,10 @@ const SyncUser = () => {
         avatar: user.imageUrl,
       })
       .then(response => {
-        console.log("✅ User synced successfully:", response.data);
+        console.log("User sincronizzato con successo:", response.data);
       })
       .catch(error => {
-        console.error("❌ Error syncing user:", error.response ? error.response.data : error.message);
+        console.error("Errore durante la sincronizzazzione dell' user:", error.response ? error.response.data : error.message);
       });
     }
   }, [user]);
