@@ -1,13 +1,22 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: whitesmoke;
+    background-image: url("./assets/sfondo.svg");
+    background-repeat: no-repeat;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn {
+    background-color: #03989e;
+    border-color: #03989e;
 }
+
+.btn:hover{
+    background-color: #22aeb3;
+    border-color: #0e5e61;
+}
+
+.leaflet-container {
+    width: 100% !important;
+    height: 400px !important;
+    border-radius: 10px;
+}
+

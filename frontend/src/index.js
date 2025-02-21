@@ -1,19 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
+import { loadStripe } from "@stripe/stripe-js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import App from "./App";
 
 const clerkFrontendAPI = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
-console.log("Clerk Publishable Key:", clerkFrontendAPI); 
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <ClerkProvider publishableKey={clerkFrontendAPI}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </ClerkProvider>
+  <React.StrictMode>
+    <ClerkProvider publishableKey={clerkFrontendAPI}>
+      <Router>
+        <App stripePromise={stripePromise} />
+      </Router>
+    </ClerkProvider>
+  </React.StrictMode>
 );
-

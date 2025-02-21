@@ -1,0 +1,9 @@
+.clear-button {
+    background-color: #A31D1D;
+    color: white;
+    border-color: #A31D1D;
+}
+
+.clear-button:hover {
+    background-color: red;
+}

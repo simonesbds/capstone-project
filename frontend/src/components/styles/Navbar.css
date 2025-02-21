@@ -1,0 +1,11 @@
+.custom-nav {
+    background-color: #03989e;
+}
+
+.nav-icon {
+    transition: color 0.3s ease-in-out;
+  }
+  
+.nav-icon:hover {
+    color: #03989e !important;
+}

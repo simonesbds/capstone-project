@@ -1,0 +1,43 @@
+.homepage-container {
+  margin-top: 80px; 
+}
+  
+.hero-carousel img {
+  object-fit: cover;
+  height: 500px;
+}
+  
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+}
+  
+.carousel-caption h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+  
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+  
+.category-card {
+  transition: all 0.3s ease-in-out;
+}
+  
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+  
+.benefits {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+}
+  
+.benefits h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}

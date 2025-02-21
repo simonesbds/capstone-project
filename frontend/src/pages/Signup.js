@@ -1,13 +1,18 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { SignUp } from "@clerk/clerk-react";
 
-const Signup = () => {
+function SignUpPage() {
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
-      <SignUp path="/signup" routing="path" signInUrl="/login" />
-    </div>
+    <Container className="mt-5 d-flex justify-content-center">
+      <Row>
+        <Col className="text-center">
+          <h2 className="fw-bold mb-4">Registrati</h2>
+          <SignUp path="/sign-up" routing="path" signInUrl="/login" />
+        </Col>
+      </Row>
+    </Container>
   );
-};
+}
 
-export default Signup;
-
+export default SignUpPage;
